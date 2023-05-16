@@ -1,6 +1,7 @@
 import Card from "@/Components/Card";
 import VideoCard from "@/Components/VideoCard";
 import Banner from "@/widgets/Banner";
+import CalculoSolda from "@/widgets/CalculoSolda";
 import Footer from "@/widgets/Footer";
 import Header from "@/widgets/Header";
 import { Inter } from "next/font/google";
@@ -39,6 +40,7 @@ export default function Home() {
           title="Parâmetros da Solda a Ponto"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis enim nibh, a imperdiet est malesuada eu. Ut sodales ornare faucibus. Duis eget dui bibendum, lobortis sapien ut, venenatis massa. Etiam non augue sed lectus pellentesque tempus. Curabitur ut tortor ex. Proin consectetur imperdiet volutpat. Nam eu elit at metus efficitur dignissim. Cras commodo mauris tristique magna elementum fermentum. Maecenas nisl odio, bibendum quis ligula maximus, sagittis tristique lectus. Nullam risus odio, viverra a rutrum ac, accumsan vitae neque. Morbi viverra nunc urna, vitae ultricies augue mollis et. Nam euismod tellus vitae ante cursus, at dictum tellus aliquet. Nunc sit amet lacus id felis vulputate convallis."
         />
+        <CalculoSolda />
         <VideoCard videoSrc="https://www.youtube.com/embed/0BIj51IcFlw" />
       </main>
       <Footer />

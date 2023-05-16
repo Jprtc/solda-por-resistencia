@@ -11,11 +11,11 @@ const Card = ({ index, imgSrc, title, description }: CardProps) => {
 
   return (
     <section
-      className={`max-w-7xl mx-auto max-h-screen ${
+      className={`max-w-7xl mx-auto ${
         isEven ? "animate-fade-in-left" : "animate-fade-in-right"
       }`}
     >
-      <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
             className="rounded-t-lg object-cover object-center h-96 w-full"
