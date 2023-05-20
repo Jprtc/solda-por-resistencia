@@ -4,7 +4,7 @@ interface VideoCardProps {
 
 const VideoCard = ({ videoSrc }: VideoCardProps) => {
   return (
-    <section className="max-w-6xl mx-auto max-h-screen animate-fade-in-normal">
+    <section className="max-w-6xl mx-auto max-h-100vh animate-fade-in-normal sm:max-h-592px">
       <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
         <iframe
           className="rounded-t-lg"
@@ -17,9 +17,9 @@ const VideoCard = ({ videoSrc }: VideoCardProps) => {
         ></iframe>
         <div className="p-5">
           <a href="#">
-            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
+            <h4 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
               Vantagens da solda a resistência:
-            </h5>
+            </h4>
           </a>
           <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut

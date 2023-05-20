@@ -26,6 +26,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Animations: */
+
 @keyframes fade-in-left {
   from {
     opacity: 0;

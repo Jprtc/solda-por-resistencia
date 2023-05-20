@@ -1,33 +1,45 @@
+import Image from "next/image";
+
 interface CardProps {
-  index: number;
   imgSrc: string;
+  imgAlt?: string;
   title: string;
-  description?: String;
-  alt?: string;
+  description?: string;
+  shouldLazyLoad: boolean;
 }
 
-const Card = ({ index, imgSrc, title, description }: CardProps) => {
-  const isEven = index % 2 === 0;
-
+const Card = ({
+  imgSrc,
+  title,
+  description,
+  imgAlt,
+  shouldLazyLoad,
+}: CardProps) => {
   return (
-    <section
-      className={`max-w-7xl mx-auto ${
-        isEven ? "animate-fade-in-left" : "animate-fade-in-right"
-      }`}
-    >
+    <section className={`max-w-7xl mx-auto`}>
       <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img
-            className="rounded-t-lg object-cover object-center h-96 w-full"
-            src={imgSrc}
-            alt=""
-          />
+          <div className="rounded-t-lg overflow-hidden">
+            <Image
+              className="rounded-t-lg object-cover object-center h-96 w-full"
+              src={imgSrc}
+              alt={imgAlt ? imgAlt : ""}
+              width={1278}
+              height={384}
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                width: "100%",
+              }}
+              loading={shouldLazyLoad ? "lazy" : "eager"}
+            />
+          </div>
         </a>
         <div className="p-5">
           <a href="#">
-            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
+            <h2 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
               {title}
-            </h5>
+            </h2>
           </a>
           <p className="font-normal text-gray-700 mb-3 dark:text-gray-400">
             {description}

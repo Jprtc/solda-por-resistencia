@@ -71,15 +71,16 @@ const CalculoSolda = () => {
 
   return (
     <div className="mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
-      <h1 className="text-center text-4xl font-semibold text-gray-800 py-4 px-6">
+      <h3 className="text-center text-4xl font-semibold text-gray-800 py-4 px-6">
         Calculadora de Solda por Resistência
-      </h1>
+      </h3>
 
       <form className="px-6 py-4">
         <div className="mb-4">
           <label
             className="block text-gray-700 font-bold mb-2"
             aria-label="tensao"
+            htmlFor="tensao"
           >
             Tensão (V):
           </label>
@@ -96,6 +97,7 @@ const CalculoSolda = () => {
           <label
             className="block text-gray-700 font-bold mb-2"
             aria-label="corrente"
+            htmlFor="corrente"
           >
             Corrente (A):
           </label>
@@ -112,6 +114,7 @@ const CalculoSolda = () => {
           <label
             className="block text-gray-700 font-bold mb-2"
             aria-label="tempo"
+            htmlFor="tempo"
           >
             Tempo (s):
           </label>
@@ -128,6 +131,7 @@ const CalculoSolda = () => {
           <label
             className="block text-gray-700 font-bold mb-2"
             aria-label="comprimento"
+            htmlFor="comprimento"
           >
             Comprimento (mm):
           </label>
@@ -144,6 +148,7 @@ const CalculoSolda = () => {
           <label
             className="block text-gray-700 font-bold mb-2"
             aria-label="pressao"
+            htmlFor="pressao"
           >
             Pressão (N/mm²):
           </label>
@@ -164,6 +169,7 @@ const CalculoSolda = () => {
             type="button"
             disabled={!isFormValidated}
             onClick={calcularParametrosSolda}
+            aria-label="Calcular Resistência da Solda"
           >
             Calcular
           </button>
