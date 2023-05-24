@@ -3,11 +3,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Contact" },
+  { href: "#section-card-1", label: "O Processo" },
+  { href: "#section-card-2", label: "Utilização Mais Comum" },
+  { href: "#section-card-3", label: "Solda a Ponto" },
+  { href: "#section-card-4", label: "Parametros" },
+  { href: "#calculadora-solda", label: "Calculadora" },
 ];
 
 const Header = () => {

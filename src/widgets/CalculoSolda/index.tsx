@@ -70,8 +70,11 @@ const CalculoSolda = () => {
   };
 
   return (
-    <div className="mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
-      <h3 className="text-center text-4xl font-semibold text-gray-800 py-4 px-6">
+    <section
+      className="mx-auto bg-white shadow-lg rounded-xl overflow-hidden"
+      id="calculadora-solda"
+    >
+      <h3 className="text-center text-4xl font-semibold text-gray-800 py-4 px-6 md:px-48">
         Calculadora de Solda por Resistência
       </h3>
 
@@ -198,7 +201,7 @@ const CalculoSolda = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

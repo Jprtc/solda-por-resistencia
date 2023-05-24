@@ -15,7 +15,7 @@ const imageCardsList = [
     imgSrc: "/solda_ponto2.webp",
     shouldLazyLoad: false,
     cardTitle: "Entenda o processo da Soldagem por Resistência.",
-    cardId: "section-observer-1",
+    cardId: "section-card-1",
     cardDescription:
       "A soldagem por resistência é uma das opções para unir metais comumente usado no ramo da soldagem. Pode ser vista em indústrias metalúrgicas, alimentícias, de linha branca, etc. Ela é sem dúvida o tipo de soldagem mais comuns na união de duas chapas de metal.",
   },
@@ -23,7 +23,7 @@ const imageCardsList = [
     imgSrc: "/utilidades-da-solda.jpg",
     shouldLazyLoad: true,
     cardTitle: "Utilização mais comum da solda por resistência.",
-    cardId: "section-observer-2",
+    cardId: "section-card-2",
     cardDescription:
       "A utilização mais comum da solda por resistência é na produção de carrocerias, parte predominante na indústria automotiva. Para se ter uma ideia, a carroceria tem em média 4.500 pontos que necessitam de solda. Por isso, entender as características de uma boa máquina de solda é essencial para quem deseja desenvolver esse tipo de projeto.",
   },
@@ -31,7 +31,7 @@ const imageCardsList = [
     imgSrc: "/como-e-feita-soldagem.jpg",
     shouldLazyLoad: true,
     cardTitle: "Solda a Ponto.",
-    cardId: "section-observer-3",
+    cardId: "section-card-3",
     cardDescription:
       "A utilização massiva da solda ponto na produção de carrocerias é a opção certa para esse tipo de serviço. Ela possibilita a soldagem de um ponto específico no qual todo o calor é concentrado. Isso é possível devido a força constante gerada pelos eletrodos, que restringem a área e garantem um melhor resultado!",
   },
@@ -39,7 +39,7 @@ const imageCardsList = [
     imgSrc: "/parametros-solda-a-ponto.webp",
     shouldLazyLoad: true,
     cardTitle: "Parâmetros da Solda a Ponto",
-    cardId: "section-observer-3",
+    cardId: "section-card-4",
     cardDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis enim nibh, a imperdiet est malesuada eu. Ut sodales ornare faucibus. Duis eget dui bibendum, lobortis sapien ut, venenatis massa. Etiam non augue sed lectus pellentesque tempus. Curabitur ut tortor ex. Proin consectetur imperdiet volutpat. Nam eu elit at metus efficitur dignissim. Cras commodo mauris tristique magna elementum fermentum. Maecenas nisl odio, bibendum quis ligula maximus, sagittis tristique lectus. Nullam risus odio, viverra a rutrum ac, accumsan vitae neque. Morbi viverra nunc urna, vitae ultricies augue mollis et. Nam euismod tellus vitae ante cursus, at dictum tellus aliquet. Nunc sit amet lacus id felis vulputate convallis.",
   },
@@ -73,6 +73,7 @@ export default function Home() {
               }
             >
               <Card
+                id={card.cardId}
                 imgSrc={card.imgSrc}
                 title={card.cardTitle}
                 description={card.cardDescription}

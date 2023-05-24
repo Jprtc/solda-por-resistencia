@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 interface CardProps {
+  id: string;
   imgSrc: string;
   imgAlt?: string;
   title: string;
@@ -10,6 +11,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
+  id,
   imgSrc,
   title,
   description,
@@ -17,7 +19,7 @@ const Card: React.FC<CardProps> = ({
   shouldLazyLoad,
 }) => {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto" id={id}>
       <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <div className="rounded-t-lg overflow-hidden">
