@@ -1,6 +1,6 @@
 import Card from "@/Components/Card";
 import VideoCard from "@/Components/VideoCard";
-import IntersectObserver from "@/utils/IntersectionObserver";
+import AnimateInView from "@/utils/AnimateInView";
 import Banner from "@/widgets/Banner";
 import CalculoSolda from "@/widgets/CalculoSolda";
 import Footer from "@/widgets/Footer";
@@ -62,13 +62,11 @@ export default function Home() {
         className={`flex min-h-screen flex-col items-center justify-center p-4 gap-8 ${inter.className} lg:p-12 lg:gap:12`}
       >
         <Banner title="Solda por Resistência" />
-
         {imageCardsList.map((card, index) => {
           return (
-            <IntersectObserver
-              id={`section-observer-${index}`}
+            <AnimateInView
               key={index}
-              animationToPlay={
+              animationClass={
                 index % 2 === 0
                   ? "animate-fade-in-left"
                   : "animate-fade-in-right"
@@ -80,12 +78,15 @@ export default function Home() {
                 description={card.cardDescription}
                 shouldLazyLoad={card.shouldLazyLoad}
               />
-            </IntersectObserver>
+            </AnimateInView>
           );
         })}
-
-        <CalculoSolda />
-        <VideoCard videoSrc="https://www.youtube.com/embed/0BIj51IcFlw" />
+        <AnimateInView animationClass="animate-fade-in-left">
+          <CalculoSolda />
+        </AnimateInView>
+        <AnimateInView animationClass="animate-fade-in-normal">
+          <VideoCard videoSrc="https://www.youtube.com/embed/0BIj51IcFlw" />
+        </AnimateInView>
       </main>
       <Footer />
     </>

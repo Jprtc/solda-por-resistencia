@@ -16,7 +16,12 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,8 +31,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-/* Animations: */
-
+/* Animations */
 @keyframes fade-in-left {
   from {
     opacity: 0;
