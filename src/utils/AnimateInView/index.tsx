@@ -11,20 +11,23 @@ interface AnimateInViewProps {
 const AnimateInView = ({ children, animationClass }: AnimateInViewProps) => {
   const elementRef = useRef<HTMLDivElement | null>(null);
 
+  const observerConfig = {
+    threshold: 0.1,
+    rootMargin: "80px 0px",
+  };
+
   useEffect(() => {
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(animationClass);
-          }
-        });
-      },
-      { threshold: 0.2 } // Adjust the threshold as needed
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("intersected");
+          entry.target.classList.add(animationClass);
+        }
+      });
+    }, observerConfig);
 
     observer.observe(element);
 
