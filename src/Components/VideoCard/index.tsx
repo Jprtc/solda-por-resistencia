@@ -5,7 +5,7 @@ interface VideoCardProps {
 const VideoCard = ({ videoSrc }: VideoCardProps) => {
   return (
     <section className="max-w-7xl mx-auto max-h-fit animate-fade-in-normal sm:max-h-592px">
-      <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-7xl dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-6xl dark:bg-gray-800 dark:border-gray-700">
         <iframe
           className="rounded-t-lg max-w-7xl"
           width="100%"
