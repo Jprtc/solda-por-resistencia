@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const links = [
   { href: "#section-card-1", label: "O Processo" },
@@ -15,12 +16,14 @@ const Header = () => {
         className="flex p-8 justify-between max-w-screen-2xl m-auto"
         id="navbar"
       >
-        <a className="flex items-center" href="/">
-          <Image src="/next.svg" alt="Your logo" width={120} height={120} />
-          <span className="ml-12 font-semibold text-xl tracking-tight ">
-            Solda por Resistência
-          </span>
-        </a>
+        <Link href="/" passHref legacyBehavior>
+          <a className="flex items-center">
+            <Image src="/next.svg" alt="Your logo" width={120} height={120} />
+            <span className="ml-12 font-semibold text-xl tracking-tight ">
+              Solda por Resistência
+            </span>
+          </a>
+        </Link>
         <div className=" block lg:flex lg:items-center w-auto">
           <div className="text-sm lg:flex-grow">
             {links.map(({ href, label }, i) => (
