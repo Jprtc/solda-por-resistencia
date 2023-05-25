@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <section className="max-w-7xl mx-auto" id={id}>
-      <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-max dark:bg-gray-800 dark:border-gray-700">
+      <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-7xl max-h-fit dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <div className="rounded-t-lg overflow-hidden">
             <Image
