@@ -6,4 +6,5 @@ module.exports = {
     "./src/widgets/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  enabled: process.env.NODE_ENV === "production",
 };
