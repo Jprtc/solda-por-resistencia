@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({
         <a href="#">
           <div className="rounded-t-lg overflow-hidden">
             <Image
-              className="rounded-t-lg object-cover object-center h-auto w-full max-h-96"
+              className="rounded-t-lg object-cover object-center h-auto w-full max-h-96 max-w-7xl"
               src={imgSrc}
               alt={imgAlt ? imgAlt : ""}
               width={1278}
