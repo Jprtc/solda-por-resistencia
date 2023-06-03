@@ -104,3 +104,12 @@ body {
   animation: fade-in-normal 1s ease-in;
   opacity: 1;
 }
+
+@media (prefers-reduced-motion) {
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-fade-in-bottom,
+  .animate-fade-in-normal {
+    animation: none;
+  }
+}
