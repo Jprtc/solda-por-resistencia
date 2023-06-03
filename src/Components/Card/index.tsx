@@ -22,13 +22,15 @@ const Card: React.FC<CardProps> = ({
     <section className="max-w-7xl mx-auto" id={id}>
       <div className="bg-white shadow-lg border border-gray-300 rounded-lg max-w-7xl max-h-fit dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <div className="rounded-t-lg overflow-hidden max-h-96 max-w-7xl">
+          <div className="relative rounded-t-lg overflow-hidden max-h-96">
             <Image
-              className="rounded-t-lg object-cover object-center h-auto w-full "
+              className="rounded-t-lg object-cover object-center h-auto w-full"
               src={imgSrc}
               alt={imgAlt ? imgAlt : ""}
-              width={1278}
-              height={384}
+              // width={1278}
+              // height={384}
+              width={1000}
+              height={600}
               loading={shouldLazyLoad ? "lazy" : "eager"}
               priority={!shouldLazyLoad}
             />

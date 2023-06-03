@@ -59,7 +59,7 @@ export default function Home() {
       </Head>
       <Header />
       <main
-        className={`flex min-h-screen flex-col items-center justify-center p-4 gap-8 ${inter.className} lg:p-12 lg:gap:12`}
+        className={`flex min-h-screen flex-col items-center justify-center p-4 gap-8 ${inter.className} lg:px-32 2xl:px-16 lg:gap:12`}
       >
         <Banner title="Solda por Resistência" />
         {imageCardsList.map((card, index) => {

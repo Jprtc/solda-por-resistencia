@@ -13,13 +13,13 @@ const Header = () => {
   return (
     <header id="header">
       <nav
-        className="flex p-8 justify-between max-w-screen-2xl m-auto"
+        className="flex p-6 py-6 justify-center max-w-screen-2xl m-auto md:p-8 lg:justify-between"
         id="navbar"
       >
         <Link href="/" passHref legacyBehavior>
           <a className="flex items-center">
             <Image src="/next.svg" alt="Your logo" width={120} height={120} />
-            <span className="ml-12 font-semibold text-xl tracking-tight ">
+            <span className="ml-6 font-semibold text-xl tracking-tight md:ml-12 ">
               Solda por Resistência
             </span>
           </a>
@@ -30,7 +30,7 @@ const Header = () => {
               <a
                 key={`nav-link-${i}`}
                 href={href}
-                className={`hover:bg-gray-300 block mt-4 lg:inline-block lg:mt-0 mr-4 rounded-md px-3 py-2 ${
+                className={`hover:bg-gray-300 block mt-4 lg:inline-block lg:mt-0 rounded-md px-3 py-2 ${
                   i >= 0 ? "hidden lg:inline-block" : ""
                 }`}
               >
