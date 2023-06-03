@@ -85,7 +85,7 @@ export default function Home() {
         <AnimateInView animationClass="animate-fade-in-left">
           <CalculoSolda />
         </AnimateInView>
-        <AnimateInView animationClass="animate-fade-in-normal">
+        <AnimateInView animationClass="animate-fade-in-bottom">
           <VideoCard videoSrc="https://www.youtube.com/embed/0BIj51IcFlw" />
         </AnimateInView>
       </main>
