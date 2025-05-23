@@ -25,21 +25,22 @@ const Header = () => {
             </span>
           </a>
         </Link>
+
         <div className=" block lg:flex lg:items-center w-auto">
           <div className="text-sm lg:flex-grow">
             {links.map(({ href, label }, i) => (
               <a
-                key={`nav-link-${i}`}
-                href={href}
-                className={`hover:bg-gray-300 block mt-4 lg:inline-block lg:mt-0 rounded-md px-3 py-2 ${
-                  i >= 0 ? "hidden lg:inline-block" : ""
-                }`}
+              key={`nav-link-${i}`}
+              href={href}
+              className={`hover:bg-gray-300 block mt-4 lg:inline-block lg:mt-0 rounded-md px-3 py-2 ${
+                i >= 0 ? "hidden lg:inline-block" : ""
+              }`}
               >
                 {label}
               </a>
             ))}
-            <ThemeToggleButton />
           </div>
+            <ThemeToggleButton />
         </div>
       </nav>
     </header>
