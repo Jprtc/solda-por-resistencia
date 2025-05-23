@@ -8,12 +8,18 @@
   --background-end-rgb: 153, 206, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 18, 40, 47;
-    --background-end-rgb: 30, 55, 82;
+  --foreground-rgb: 235, 245, 255; 
+  --background-start-rgb: 40, 60, 100; 
+  --background-end-rgb: 20, 35, 70; 
   }
+} */
+
+.dark {
+  --foreground-rgb: 235, 245, 255; 
+  --background-start-rgb: 40, 60, 100; 
+  --background-end-rgb: 20, 35, 70; 
 }
 
 html {

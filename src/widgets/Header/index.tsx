@@ -1,3 +1,4 @@
+import ThemeToggleButton from "@/Components/ThemeToggleButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,6 +38,7 @@ const Header = () => {
                 {label}
               </a>
             ))}
+            <ThemeToggleButton />
           </div>
         </div>
       </nav>
